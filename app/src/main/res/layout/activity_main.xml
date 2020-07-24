@@ -6,14 +6,106 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="哈哈是我喇"
-        android:textSize='60dp'
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="96dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="請輸入姓名"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.97"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/enter_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="請輸入姓名以開始遊戲"
+        app:layout_constraintStart_toStartOf="@+id/user_name"
+        app:layout_constraintTop_toBottomOf="@+id/user_name" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+    </RadioGroup>
+
+    <RadioButton
+        android:id="@+id/btn_stone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="石頭"
+        app:layout_constraintTop_toTopOf="@+id/btn_scissor"
+        tools:layout_editor_absoluteX="175dp" />
+
+    <RadioButton
+        android:id="@+id/btn_scissor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="剪刀"
+        app:layout_constraintEnd_toStartOf="@+id/btn_stone"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="193dp" />
+
+    <RadioButton
+        android:id="@+id/btn_paper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="布"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_stone"
+        app:layout_constraintTop_toTopOf="@+id/btn_stone" />
+
+    <Button
+        android:id="@+id/btn_mora"
+        android:layout_width="243dp"
+        android:layout_height="55dp"
+        android:text="猜拳"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_stone"
+        app:layout_constraintVertical_bias="0.095" />
+
+    <TextView
+        android:id="@+id/text_winner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="勝利者"
+        app:layout_constraintTop_toTopOf="@+id/text_name"
+        tools:layout_editor_absoluteX="130dp" />
+
+    <TextView
+        android:id="@+id/text_cmora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="電腦出拳"
+        app:layout_constraintEnd_toEndOf="@+id/btn_paper"
+        app:layout_constraintTop_toTopOf="@+id/text_mmora" />
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
+        android:text="名字"
+        app:layout_constraintStart_toStartOf="@+id/btn_scissor"
+        app:layout_constraintTop_toBottomOf="@+id/btn_mora" />
+
+    <TextView
+        android:id="@+id/text_mmora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我方出拳"
+        app:layout_constraintTop_toTopOf="@+id/text_winner"
+        tools:layout_editor_absoluteX="205dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
